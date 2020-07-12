@@ -19,7 +19,7 @@ export const exposeGlobal = (id: string, value: any, always = false) => {
         (always ||
             typeof process === "undefined" ||
             process.env.NODE_ENV !== "production" ||
-            process.env.UMBRELLA_ASSERTS === "1")
+            process.env.UMBRELLA_GLOBALS === "1")
     ) {
         glob[id] = value;
     }
